@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Legal Consultation | Repol Law Office</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstap CSS -->
+    <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="../assets/css/animate.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="../assets/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      :root {
+        --primary: #cdba6d;
+      }
+      .section {
+        padding: 8em 0 4em;
+        position: relative;
+      }
+
+      .custom-navbar .nav-link {
+        color: var(--dark);
+      }
+      @media (max-width: 991.98px) {
+        .custom-navbar .nav-link {
+          color: var(--light);
+        }
+      }
+
+      .container-article {
+        width: 100%;
+        padding-right: 40px;
+        padding-left: 40px;
+        margin-right: auto;
+        margin-left: auto;
+        overflow: hidden;
+      }
+      .container-article h2 {
+        font-weight: 300;
+      }
+
+      @media (max-width: 767px) {
+        .container-article {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+      }
+      @media (max-width: 768px) {
+        .section {
+          padding: 5em 0;
+        }
+      }
+
+      hr {
+        border: none;
+        border-top: 4px solid var(--primary);
+        width: 550px;
+        margin: 0;
+        margin-bottom: 30px;
+      }
+
+      @media (max-width: 991px) {
+        hr {
+          width: calc(100% - 20px);
+          margin-left: 10px;
+        }
+      }
+      .article-text {
+        font-size: 16px;
+        line-height: 1.8;
+        margin-bottom: 20px;
+      }
+
+      .sidebar-box {
+        position: relative;
+        top: 18px;
+        margin-bottom: 40px;
+        font-size: 15px;
+        width: 100%;
+        float: left;
+        background: #fff;
+      }
+
+      .sidebar-box *:last-child {
+        margin-bottom: 0;
+      }
+
+      .sidebar-box h3 {
+        font-size: 18px;
+        margin-bottom: 22px;
+        font-weight: 700;
+        color: #2e2e1f;
+      }
+
+      .categories li,
+      .sidelink li {
+        position: relative;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #dee2e6;
+        list-style: none;
+      }
+
+      .categories li:last-child,
+      .sidelink li:last-child {
+        margin-bottom: 0;
+        border-bottom: none;
+        padding-bottom: 0;
+      }
+
+      .categories li a,
+      .sidelink li a {
+        display: block;
+        color: #7a7a7a;
+        font-weight: 600;
+      }
+
+      .categories li a span,
+      .sidelink li a span {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #ccc;
+      }
+
+      .categories li a:hover,
+      .categories li a:focus,
+      .sidelink li a:hover,
+      .sidelink li a:focus {
+        outline: none;
+        color: var(--primary);
+      }
+
+      .categories li.active a,
+      .sidelink li.active a {
+        color: var(--primary);
+      }
+
+      .categories li.active a span,
+      .sidelink li.active a span {
+        color: var(--primary);
+      }
+
+      .recent-blog .blog-img {
+        display: block;
+        height: 80px;
+        width: 80px;
+      }
+
+      .recent-blog .text {
+        width: calc(100% - 100px);
+      }
+      .recent-blog .text .heading {
+        font-size: 16px;
+        font-weight: 400;
+        padding-left: 15px;
+      }
+      .recent-blog .text .heading a {
+        color: #000000;
+      }
+      .recent-blog .text .heading a:hover,
+      .recent-blog .text .heading a:active,
+      .recent-blog .text .heading a:focus {
+        color: var(--primary);
+      }
+      .recent-blog .text .meta > div {
+        display: inline-block;
+        font-size: 12px;
+        margin-right: 5px;
+      }
+      .recent-blog .text .meta > div a {
+        padding-left: 15px;
+        color: gray;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="../index.html">
+          <img
+            src="../assets/images/repol-law-office-scroll.png"
+            alt="Repol Law Office Logo"
+            loading="lazy"
+            width="250"
+          />
+        </a>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-gold"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <img
+              src="../assets/images/repol-law-office-logo.png"
+              alt="Repol Law Office Logo"
+              loading="lazy"
+              width="250"
+            />
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="custom-navbar navbar-nav ms-auto mb-2 mb-lg-0">
+              <a
+                class="nav-item nav-link mx-2 active"
+                aria-current="page"
+                href="../index.html"
+                >Home</a
+              >
+              <a class="nav-item nav-link mx-2" href="../index.html#about"
+                >About</a
+              >
+              <a class="nav-item nav-link mx-2" href="../blog.html">Blog</a>
+              <a class="nav-item nav-link mx-2" href="#contact">Contact</a>
+              <div class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Pages
+                </a>
+                <div class="dropdown-menu border-0 m-0">
+                  <a class="dropdown-item" href="../index.html#mission-vision"
+                    >Our Mission & Vision</a
+                  >
+                  <a class="dropdown-item" href="../index.html#land-surveying"
+                    >Land Surveying</a
+                  >
+                  <a class="dropdown-item" href="../index.html#our-services"
+                    >Our Services</a
+                  >
+                  <!-- <a class="dropdown-item" href="../index.html#team"
+                    >Our Team</a
+                  > -->
+
+                  <a class="dropdown-item" href="../index.html#client"
+                    >Our Client</a
+                  >
+
+                  <a class="dropdown-item" href="../index.html#testimonial"
+                    >Testimonial</a
+                  >
+                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" href="../case-study.html"
+                    >Case Studies</a
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://www.facebook.com/landlimits"
+              class="btn btn-brand mx-2"
+              style="width: 145px"
+              >Inquire Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End-->
+
+    <!-- Article -->
+    <section class="section">
+      <div class="container container-article">
+        <div class="row" style="--bs-gutter-x: 3.5rem">
+          <div class="col-lg-8">
+            <p class="wow fadeIn" data-wow-delay="0.2s">
+              <img src="../assets/images/blog/ex-blog-1.jpg" alt="" />
+            </p>
+            <h2 class="mb-4 mt-4 wow fadeIn" data-wow-delay="0.4s">
+              Legal Consultation
+            </h2>
+            <p class="article-text wow fadeIn" data-wow-delay="0.2s">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque,
+              perferendis velit harum magnam veritatis sunt id, est pariatur,
+              cupiditate vitae necessitatibus nam quidem quo quaerat! A fuga
+              dignissimos facere natus!
+            </p>
+            <h2 class="mb-3 mt-5 wow fadeIn" data-wow-delay="0.4s">
+              How Can We Help !
+            </h2>
+            <p class="wow fadeIn" data-wow-delay="0.2s">
+              Temporibus ad error suscipit exercitationem hic molestiae totam
+              obcaecati rerum, eius aut, in. Exercitationem atque quidem tempora
+              maiores ex architecto voluptatum aut officia doloremque. Error
+              dolore voluptas, omnis molestias odio dignissimos culpa ex earum
+              nisi consequatur quos odit quasi repellat qui officiis reiciendis
+              incidunt hic non? Debitis commodi aut, adipisci.
+            </p>
+            <p class="wow fadeIn" data-wow-delay="0.4s">
+              <a href="#" class="btn btn-brand">Inquire Now</a>
+            </p>
+            <div class="row mt-5 pt-5" style="--bs-gutter-x: 3.5rem">
+              <div class="col-md-12">
+                <h2
+                  class="mb-4 font-weight-bold wow fadeIn"
+                  data-wow-delay="0.4s"
+                >
+                  Our Legal Advisors
+                </h2>
+              </div>
+              <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.2s">
+                <div class="box-flipper">
+                  <div class="flipper">
+                    <div
+                      class="front"
+                      style="
+                        background-image: url('../assets/images/our-team/Atty-Engr-Mary-Jane.png');
+                      "
+                    >
+                      <div class="job-title">
+                        <h2 style="font-size: 15px">
+                          atty. engr. mary jane y. repol
+                        </h2>
+                        <p>Lawyer and geodetic engineer</p>
+                      </div>
+                    </div>
+                    <div class="back">
+                      <!-- back content -->
+                      <div class="author d-flex">
+                        <div class="image align-self-center">
+                          <img
+                            src="../assets/images/our-team/Atty-Engr-Mary-Jane.png"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div class="details align-self-center ms-3">
+                        <div class="name">atty. engr. mary jane y. repol</div>
+                        <div class="position">Lawyer and geodetic engineer</div>
+                      </div>
+                      <blockquote>
+                        <p>
+                          &ldquo;Lorem ipsum dolor sit amet consectetur
+                          adipisicing elit. Sit velit maiores possimus eligendi
+                          quas pariatur minus consequatur suscipit asperiores
+                          quo placeat, laborum facere similique adipisci? Dicta
+                          aliquid optio nostrum earum.&rdquo;
+                        </p>
+                      </blockquote>
+
+                      <a href="our-team.html#team-1" class="learn-more-btn"
+                        >Learn More</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT SIDE-->
+          <div class="col-lg-4 sidebar pl-lg-5">
+            <!-- CATEGORIES OF Our Services  -->
+            <div class="sidebar-box">
+              <div class="categories">
+                <h3 class="wow fadeIn" data-wow-delay="0.2s">Our Services</h3>
+                <li class="wow fadeInRight" data-wow-delay="0.3s">
+                  <a href="Land_Titling.html"
+                    >Land Titling
+                    <span class="fas fa-chevron-right me-3 mb-2"></span
+                  ></a>
+                </li>
+                <li class="wow fadeInRight" data-wow-delay="0.4s">
+                  <a href="Property_Dispute_Resolution.html"
+                    >Property Dispute Resolution
+                    <span class="fas fa-chevron-right me-3 mb-23"></span
+                  ></a>
+                </li>
+                <li class="wow fadeInRight" data-wow-delay="0.5s">
+                  <a href="Litigation.html"
+                    >Litigation
+                    <span class="fas fa-chevron-right me-3 mb-2"></span
+                  ></a>
+                </li>
+                <li class="wow fadeInRight" data-wow-delay="0.6s">
+                  <a href="Family_Resolution.html"
+                    >Family Resolution
+                    <span class="fas fa-chevron-right me-3 mb-2"></span
+                  ></a>
+                </li>
+                <li class="active wow fadeInRight" data-wow-delay="0.7s">
+                  <a href="Legal_Consultation.html"
+                    >Legal Consultation
+                    <span class="fas fa-chevron-right me-3 mb-23"></span
+                  ></a>
+                </li>
+                <li class="wow fadeInRight" data-wow-delay="0.8s">
+                  <a href="Retainership.html"
+                    >Retainership
+                    <span class="fas fa-chevron-right me-3 mb-2"></span
+                  ></a>
+                </li>
+                <li class="wow fadeInRight" data-wow-delay="0.9s">
+                  <a href="Legal_Document_And_Contracts.html"
+                    >Legal Document And Contracts
+                    <span class="fas fa-chevron-right me-3 mb-2"></span
+                  ></a>
+                </li>
+              </div>
+            </div>
+
+            <!-- RECENT BLOG-->
+            <div class="sidebar-box">
+              <h3 class="wow fadeIn" data-wow-delay="0.1s">Recent Blog</h3>
+              <div class="recent-blog mb-4 d-flex">
+                <a
+                  class="blog-img mr-4 wow fadeIn"
+                  data-wow-delay="0.3s"
+                  style="
+                    background-image: url('../assets/images/blog/ex-blog-1.jpg');
+                  "
+                ></a>
+                <div class="text">
+                  <h3 class="heading wow fadeInRight" data-wow-delay="0.2s">
+                    <a href="#"
+                      >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Harum doloremque.</a
+                    >
+                  </h3>
+                  <div class="meta wow fadeInRight" data-wow-delay="0.3s">
+                    <div>
+                      <a href="#"
+                        ><span class="icon-calendar"></span> Month. 01, Year</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="recent-blog mb-4 d-flex">
+                <a
+                  class="blog-img mr-4 wow fadeIn"
+                  data-wow-delay="0.3s"
+                  style="
+                    background-image: url('../assets/images/blog/ex-blog-2.jpg');
+                  "
+                ></a>
+                <div class="text">
+                  <h3 class="heading wow fadeInRight" data-wow-delay="0.2s">
+                    <a href="#"
+                      >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Harum doloremque.</a
+                    >
+                  </h3>
+                  <div class="meta wow fadeInRight" data-wow-delay="0.3s">
+                    <div>
+                      <a href="#"
+                        ><span class="icon-calendar"></span> Month. 01, Year</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="recent-blog mb-4 d-flex">
+                <a
+                  class="blog-img mr-4 wow fadeIn"
+                  data-wow-delay="0.3s"
+                  style="
+                    background-image: url('../assets/images/blog/ex-blog-3.jpg');
+                  "
+                ></a>
+                <div class="text">
+                  <h3 class="heading wow fadeInRight" data-wow-delay="0.2s">
+                    <a href="#"
+                      >Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Harum doloremque.</a
+                    >
+                  </h3>
+                  <div class="meta wow fadeInRight" data-wow-delay="0.3s">
+                    <div>
+                      <a href="#"
+                        ><span class="icon-calendar"></span>Month. 01, Year</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Article End -->
+
+    <!-- Footer -->
+    <footer
+      class="footer footer-section wow fadeIn"
+      data-wow-delay="0.4s"
+      id="contact"
+    >
+      <div class="footer-container">
+        <div class="row mb-0">
+          <div class="col-md">
+            <div class="footer-widget mb-4">
+              <a class="footer-brand" href="#">
+                <img
+                  src="../assets/images/repol-law-office-logo.png"
+                  alt="Repol Law Office Logo"
+                  loading="lazy"
+                  class="mt-3 mb-2"
+                />
+              </a>
+              <!-- Map Repol -->
+              <p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3865.9394791136297!2d121.07964897510062!3d14.31494818613826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDE4JzUzLjgiTiAxMjHCsDA0JzU2LjAiRQ!5e0!3m2!1sen!2sph!4v1711730313616!5m2!1sen!2sph"
+                  width="300"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </p>
+              <!-- Map Repol End-->
+
+              <!-- Social Media -->
+              <ul
+                class="footer-social list-social float-md-left float-lft mt-5"
+              >
+                <li class="">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="">
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+                </li>
+                <li class="">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+              <!-- Social Media End-->
+            </div>
+          </div>
+
+          <!-- Our Services -->
+          <div class="col-md">
+            <div class="footer-widget" style="width: 90%">
+              <h2 class="heading-2 center mt-4 mb-5">Our Services</h2>
+              <div class="list-unstyled center">
+                <ul style="font-family: var(--font-description)">
+                  <li>
+                    <a href="../our_service/Land_Titling.html" class="d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i>
+                      <span class="text">Land Titling</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../our_service/Property_Dispute_Resolution.html"
+                      class="py-1 d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i>
+                      <span class="text">Property Dispute Resolution</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../our_service/Litigation.html"
+                      class="py-1 d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i>
+                      <span class="text">Litigation</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="../our_service/Family_Resolution.html"
+                      class="d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i>
+                      <span class="text">Family Resolution</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../our_service/Legal_Consultation.html"
+                      class="py-1 d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i>
+                      <span class="text">Legal Consultation</span></a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="../our_service/Retainership.html"
+                      class="py-1 d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i
+                      ><span class="text"> Retainership</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="../our_service/Legal_Document_And_Contracts.html"
+                      class="py-1 d-block"
+                      ><i class="fas fa-chevron-right me-3 mb-2"></i>
+                      <span class="text">Legal Document And Contracts</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Our Services End-->
+
+          <!-- Contact Details -->
+          <div class="col-md">
+            <div class="footer-widget" style="width: 320px">
+              <h2 class="heading-2 mt-4 mb-5">Talk to Us</h2>
+              <div
+                class="information mb-3"
+                style="font-family: var(--font-description)"
+              >
+                <ul>
+                  <li>
+                    <i class="fas fa-phone"></i>
+                    <span class="text">0928 304 9446</span>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="text"
+                      >2nd Floor JMCC Bldg. 41 Jubilation Commercial Strip,
+                      Brgy. Zapote, Biñan, Laguna</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i>
+                    <span class="text"> repol.law@gmail.com</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Details End -->
+
+          <!-- Open Hours -->
+          <div class="col-md">
+            <div class="footer-widget mb-4">
+              <h2 class="heading-2 mt-4 mb-5">Business Hours</h2>
+              <div
+                class="opening-hours"
+                style="font-family: var(--font-description)"
+              >
+                <h4>Opening Days:</h4>
+                <p class="ps-3">
+                  <span>Monday – Friday : NN to NN</span>
+                  <span>Saturday : NN to NN</span>
+                </p>
+                <h4>Vacations:</h4>
+                <p class="ps-3">
+                  <span>All Sunday Days</span>
+                  <span>All Official Holidays</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Open Hours End -->
+        </div>
+      </div>
+    </footer>
+    <!-- Footer ends-->
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/fdf300571b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap, JQuery Popper Js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="../assets/js/script.js"></script>
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- WOW JS -->
+    <script src="../assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>

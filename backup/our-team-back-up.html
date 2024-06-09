@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Repol Law Office</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-xxx"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstap CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+    <!-- Animate CSS -->
+    <link rel="stylesheet" href="assets/css/animate.css" />
+
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css"
+      integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      .section {
+        position: relative;
+        padding: 4em 0;
+        padding-bottom: 26px;
+      }
+
+      @media (max-width: 768px) {
+        .section {
+          padding: 4em 0;
+          padding-bottom: 0 !important;
+        }
+      }
+
+      .container {
+        width: 100%;
+        padding-right: 15px;
+        padding-left: 15px;
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+      @media (min-width: 576px) {
+        .container {
+          max-width: 540px;
+        }
+      }
+
+      @media (min-width: 768px) {
+        .container {
+          max-width: 720px;
+        }
+      }
+
+      @media (min-width: 992px) {
+        .container {
+          max-width: 960px;
+        }
+      }
+
+      @media (min-width: 1200px) {
+        .container {
+          max-width: 1140px;
+        }
+      }
+
+      /* Team 1 */
+      .background .img-bg-1 {
+        position: absolute;
+        background: linear-gradient(
+          rgba(8, 8, 62, 0.336),
+          rgba(8, 8, 62, 0.486)
+        );
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+      }
+      .atty-details {
+        display: flex;
+        flex-direction: row;
+      }
+      .atty-details .atty-1 {
+        position: relative;
+        top: 28px;
+        order: 2;
+        margin-left: auto;
+        width: 50%;
+      }
+
+      .atty-details .description {
+        position: absolute;
+        order: 1;
+        border-radius: 10px;
+        top: 100px;
+        left: 100px;
+        bottom: 20px;
+        width: 47%;
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: rgba(14, 36, 51, 0.9);
+        color: #fff;
+      }
+
+      .atty-details .description h2,
+      .atty-details .description span {
+        margin-bottom: -5px;
+        margin-top: 0;
+        padding: auto;
+        color: #cdba6d;
+      }
+
+      .atty-details .description p {
+        color: #fff;
+        margin-bottom: -5px;
+        margin-top: 20px;
+        line-height: 25px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .img-bg-1 {
+          display: none;
+        }
+
+        .atty-details {
+          flex-direction: column;
+          position: relative;
+          top: 20px;
+        }
+
+        .atty-details .atty-1 {
+          background-image: url("assets/images/ex-bg-2.jpeg");
+          order: 1;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .atty-details .description {
+          position: relative;
+          width: 100%;
+          order: 2;
+          padding: 10px;
+          margin: 20px auto;
+          left: 0;
+          top: 10px;
+          border-radius: 0;
+          background: none;
+        }
+        .atty-details .description h2 {
+          font-size: 28px;
+        }
+
+        .atty-details .description p {
+          font-size: 18px;
+          color: #000;
+          margin-top: 15px;
+        }
+      }
+
+      /* Team 1 End */
+
+      /* Team 2  */
+      .background-2 .img-bg-2 {
+        position: absolute;
+        background: linear-gradient(
+          rgba(8, 8, 62, 0.336),
+          rgba(8, 8, 62, 0.486)
+        );
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+      }
+      .atty-details {
+        display: flex;
+        flex-direction: row;
+      }
+      .atty-details .atty-2-left {
+        position: relative;
+        top: 28px;
+        right: 550px;
+        margin-left: auto;
+        width: 50%;
+      }
+      .atty-details .description-right {
+        position: absolute;
+        border-radius: 10px;
+        top: 100px;
+        bottom: 20px;
+        left: 680px;
+        width: 47%;
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-right: 40px;
+        background: rgba(14, 36, 51, 0.9);
+        color: #fff;
+      }
+
+      .atty-details .description-right h2,
+      .atty-details .description-right span {
+        margin-bottom: -5px;
+        margin-top: 0;
+        padding: auto;
+        color: #cdba6d;
+      }
+
+      .atty-details .description-right p {
+        color: #fff;
+        margin-bottom: -5px;
+        margin-top: 20px;
+        line-height: 25px;
+      }
+      @media only screen and (max-width: 768px) {
+        .img-bg-2 {
+          display: none;
+        }
+
+        .atty-details {
+          flex-direction: column;
+          position: relative;
+          top: 20px;
+        }
+
+        .atty-details .atty-2-left {
+          background-image: url("assets/images/ex-bg-3.jpg");
+          order: 1;
+          width: 100%;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        .atty-details .description-right {
+          position: relative;
+          width: 100%;
+          order: 2;
+          left: 0;
+          padding: 10px;
+          margin: 20px auto;
+          top: 10px;
+          border-radius: 0;
+          background: none;
+        }
+
+        .atty-details .description-right h2 {
+          font-size: 28px;
+        }
+
+        .atty-details .description-right p {
+          font-size: 18px;
+          color: #000;
+          margin-top: 15px;
+        }
+      }
+      /* Team 2 End */
+
+      /* Team 3 */
+      .background .img-bg-3 {
+        position: absolute;
+        background: linear-gradient(
+          rgba(8, 8, 62, 0.336),
+          rgba(8, 8, 62, 0.486)
+        );
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+      }
+      .atty-details {
+        display: flex;
+        flex-direction: row;
+      }
+      .atty-details .atty-3 {
+        position: relative;
+        top: 28px;
+        order: 2;
+        margin-left: auto;
+        width: 50%;
+      }
+
+      .atty-details .description h2,
+      .atty-details .description span {
+        margin-bottom: -5px;
+        margin-top: 0;
+        padding: auto;
+        color: #cdba6d;
+      }
+
+      .atty-details .description p {
+        color: #fff;
+        margin-bottom: -5px;
+        margin-top: 20px;
+        line-height: 25px;
+      }
+
+      @media only screen and (max-width: 768px) {
+        .img-bg-3 {
+          display: none;
+        }
+
+        .atty-details {
+          flex-direction: column;
+          position: relative;
+          top: 20px;
+        }
+
+        .atty-details .atty-3 {
+          background-image: url("assets/images/ex-bg-2.jpeg");
+          order: 1;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .atty-details .description h2 {
+          font-size: 28px;
+        }
+
+        .atty-details .description p {
+          font-size: 18px;
+          color: #000;
+          margin-top: 15px;
+        }
+      }
+      /* Team 3 End */
+
+      /* Team 4  */
+      .background-2 .img-bg-4 {
+        position: absolute;
+        background: linear-gradient(
+          rgba(8, 8, 62, 0.336),
+          rgba(8, 8, 62, 0.486)
+        );
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+      }
+      .atty-details {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .atty-details .description-right h2,
+      .atty-details .description-right span {
+        margin-bottom: -5px;
+        margin-top: 0;
+        padding: auto;
+        color: #cdba6d;
+      }
+
+      .atty-details .description-right p {
+        color: #fff;
+        margin-bottom: -5px;
+        margin-top: 20px;
+        line-height: 25px;
+      }
+      @media only screen and (max-width: 768px) {
+        .img-bg-4 {
+          display: none;
+        }
+
+        .atty-details {
+          flex-direction: column;
+          position: relative;
+          top: 20px;
+        }
+
+        .atty-details .atty-2-left {
+          background-image: url("assets/images/ex-bg-3.jpg");
+          order: 1;
+          width: 100%;
+          right: 0;
+          margin: 0 auto;
+        }
+
+        .atty-details .description-right {
+          position: relative;
+          width: 100%;
+          order: 2;
+          left: 0;
+          padding: 10px;
+          margin: 20px auto;
+          top: 10px;
+          border-radius: 0;
+          background: none;
+        }
+
+        .atty-details .description-right h2 {
+          font-size: 28px;
+        }
+
+        .atty-details .description-right p {
+          font-size: 18px;
+          color: #000;
+          margin-top: 15px;
+        }
+      }
+      /* Team 4 End */
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">
+          <img
+            src="assets/images/repol-law-office-logo.png"
+            alt="Repol Law Office Logo"
+            loading="lazy"
+            width="250"
+            id="navbarLogo"
+          />
+        </a>
+        <button
+          class="navbar-toggler shadow-none border-0"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasDarkNavbar"
+          aria-controls="offcanvasDarkNavbar"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-gold"></span>
+        </button>
+        <div
+          class="offcanvas offcanvas-start text-bg-dark"
+          tabindex="-1"
+          id="offcanvasDarkNavbar"
+          aria-labelledby="offcanvasDarkNavbarLabel"
+        >
+          <div class="offcanvas-header border-bottom">
+            <img
+              src="assets/images/repol-law-office-logo.png"
+              alt="Repol Law Office Logo"
+              loading="lazy"
+              width="250"
+            />
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <a
+                class="nav-item nav-link mx-2 active"
+                aria-current="page"
+                href="index.html"
+                >Home</a
+              >
+              <a class="nav-item nav-link mx-2" href="index.html#about"
+                >About</a
+              >
+              <a class="nav-item nav-link mx-2" href="blog.html">Blog</a>
+              <a class="nav-item nav-link mx-2" href="#contact">Contact</a>
+              <div class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Pages
+                </a>
+                <div class="dropdown-menu border-0 m-0">
+                  <a class="dropdown-item" href="index.html#mission-vision"
+                    >Our Mission & Vision</a
+                  >
+                  <a class="dropdown-item" href="index.html#practice-area"
+                    >Practice Areas</a
+                  >
+                  <a class="dropdown-item" href="index.html#land-surveying"
+                    >Land Surveying</a
+                  >
+                  <a class="dropdown-item" href="index.html#team">Our Team</a>
+
+                  <a class="dropdown-item" href="index.html#client"
+                    >Our Client</a
+                  >
+
+                  <a class="dropdown-item" href="index.html#testimonial"
+                    >Testimonial</a
+                  >
+                  <hr class="dropdown-divider" />
+                  <a class="dropdown-item" href="case-study.html"
+                    >Case Studies</a
+                  >
+                </div>
+              </div>
+            </div>
+            <a
+              href="https://www.facebook.com/landlimits"
+              class="btn btn-brand mx-2"
+              style="width: 145px"
+              >Inquire Now</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar End -->
+
+    <!-- Team 1 -->
+    <section class="section" id="team-1">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="background">
+              <img src="assets/images/ex-bg-2.jpeg" alt="" class="img-bg-1" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="atty-details">
+              <img
+                src="assets/images/our-team/ex-attorney-bg-1.png"
+                alt=""
+                class="atty-1 wow fadeIn"
+                data-wow-delay="0.2s"
+              />
+              <div class="description wow fadeInLeft" data-wow-delay="0.2s">
+                <h2>Team 1</h2>
+                <span>Laywer</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team 1 End -->
+
+    <!-- Team 2 -->
+    <section class="section" id="team-2">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="background-2">
+              <img src="assets/images/ex-bg-3.jpg" alt="" class="img-bg-2" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="atty-details">
+              <img
+                src="assets/images/our-team/ex-attorney-bg-2.png"
+                alt=""
+                class="atty-2-left wow fadeIn"
+                data-wow-delay="0.2s"
+              />
+              <div
+                class="description-right wow fadeInRight"
+                data-wow-delay="0.2s"
+              >
+                <h2>Team 2</h2>
+                <span>Laywer</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team 2 End -->
+
+    <!-- Team 3 -->
+    <section class="section" id="team-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="background">
+              <img src="assets/images/ex-bg-2.jpeg" alt="" class="img-bg-3" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="atty-details">
+              <img
+                src="assets/images/our-team/ex-attorney-bg-3.png"
+                alt=""
+                class="atty-3 wow fadeIn"
+                data-wow-delay="0.2s"
+              />
+              <div class="description wow fadeInLeft" data-wow-delay="0.2s">
+                <h2>Team 3</h2>
+                <span>Laywer</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team 3 End -->
+
+    <!-- Team 4 -->
+    <section class="section" id="team-4">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="background-2">
+              <img src="assets/images/ex-bg-3.jpg" alt="" class="img-bg-4" />
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <div class="atty-details">
+              <img
+                src="assets/images/our-team/ex-attorney-bg-4.png"
+                alt=""
+                class="atty-2-left wow fadeIn"
+                data-wow-delay="0.2s"
+              />
+              <div
+                class="description-right wow fadeInRight"
+                data-wow-delay="0.2s"
+              >
+                <h2>Team 4</h2>
+                <span>Laywer</span>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Consectetur aliquid nesciunt quis ipsum quos repudiandae
+                  recusandae quas labore aperiam magnam in id, eveniet tempore
+                  corporis. Quod voluptate a recusandae ad? Lorem ipsum dolor
+                  sit amet consectetur adipisicing elit. Consectetur aliquid
+                  nesciunt quis ipsum quos repudiandae recusandae quas labore
+                  aperiam magnam in id, eveniet tempore corporis. Quod voluptate
+                  a recusandae ad?
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Team 4 End -->
+
+    <!-- Footer -->
+    <footer
+      class="footer footer-section wow fadeInUp"
+      data-wow-delay="0.4s"
+      id="contact"
+    >
+      <div class="footer-container">
+        <div class="row mb-0">
+          <div class="col-md">
+            <div class="footer-widget mb-4">
+              <a class="footer-brand" href="#">
+                <img
+                  src="assets/images/repol-law-office-logo.png"
+                  alt="Repol Law Office Logo"
+                  loading="lazy"
+                  class="mt-3 mb-2"
+                />
+              </a>
+              <!-- Map Repol -->
+              <p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3865.9394791136297!2d121.07964897510062!3d14.31494818613826!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTTCsDE4JzUzLjgiTiAxMjHCsDA0JzU2LjAiRQ!5e0!3m2!1sen!2sph!4v1711730313616!5m2!1sen!2sph"
+                  width="300"
+                  height="200"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </p>
+              <!-- Map Repol End-->
+
+              <!-- Social Media -->
+              <ul
+                class="footer-social list-unstyled float-md-left float-lft mt-5"
+              >
+                <li class="">
+                  <a href="#"><i class="fab fa-facebook-f"></i></a>
+                </li>
+                <li class="">
+                  <a href="#"><i class="fab fa-tiktok"></i></a>
+                </li>
+                <li class="">
+                  <a href="#"><i class="fab fa-instagram"></i></a>
+                </li>
+              </ul>
+              <!-- Social Media End-->
+            </div>
+          </div>
+
+          <!-- Practice Area -->
+          <div class="col-md">
+            <div class="footer-widget" style="width: 90%">
+              <h2 class="heading-2 center mt-4 mb-5">Practice Areas</h2>
+              <ul
+                class="list-unstyled center"
+                style="font-family: var(--font-description)"
+              >
+                <li>
+                  <a href="pa-article.html" class="d-block"
+                    ><i class="fas fa-chevron-right me-3 mb-2"></i> Land
+                    Titling/Transfer</a
+                  >
+                </li>
+                <li>
+                  <a href="pa-article.html" class="py-1 d-block"
+                    ><i class="fas fa-chevron-right me-3 mb-2"></i> Land
+                    Use/Zoning</a
+                  >
+                </li>
+                <li>
+                  <a href="pa-article.html" class="py-1 d-block"
+                    ><i class="fas fa-chevron-right me-3 mb-2"></i> Real
+                    Estate</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Practice Area End-->
+
+          <!-- Contact Details -->
+          <div class="col-md">
+            <div class="footer-widget" style="width: 320px">
+              <h2 class="heading-2 mt-4 mb-5">Talk to Us</h2>
+              <div
+                class="information mb-3"
+                style="font-family: var(--font-description)"
+              >
+                <ul>
+                  <li>
+                    <i class="fas fa-phone"></i>
+                    <span class="text">+63 917-871-3035</span>
+                  </li>
+
+                  <li>
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span class="text"
+                      >2nd Floor JMCC Bldg. 41 Jubilation Commercial Strip,
+                      Brgy. Zapote, Biñan, Laguna</span
+                    >
+                  </li>
+                  <li>
+                    <i class="fas fa-envelope"></i>
+                    <a href="" class="text hover">
+                      landlimits.surveying@gmail.com</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- Contact Details End -->
+
+          <!-- Open Hours -->
+          <div class="col-md">
+            <div class="footer-widget mb-4">
+              <h2 class="heading-2 mt-4 mb-5">Business Hours</h2>
+              <div
+                class="opening-hours"
+                style="font-family: var(--font-description)"
+              >
+                <h4>Opening Days:</h4>
+                <p class="ps-3">
+                  <span>Monday – Friday : NN to NN</span>
+                  <span>Saturday : NN to NN</span>
+                </p>
+                <h4>Vacations:</h4>
+                <p class="ps-3">
+                  <span>All Sunday Days</span>
+                  <span>All Official Holidays</span>
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Open Hours End -->
+        </div>
+      </div>
+    </footer>
+    <!-- Footer ends-->
+
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/fdf300571b.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Bootstrap, JQuery Popper Js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+      integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- JavaScript -->
+    <script src="assets/js/script.js"></script>
+
+    <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    <!-- WOW JS -->
+    <script src="assets/js/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+  </body>
+</html>
