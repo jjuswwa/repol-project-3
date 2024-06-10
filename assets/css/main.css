@@ -507,41 +507,68 @@ img {
 /** ===== MISSION & VISION END ===== **/
 
 /** ===== OUR SERVICES ===== **/
-.grid-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  margin-left: -10px;
-  margin-right: -10px;
-}
-
 .our-service {
   position: relative;
-  overflow: hidden;
-  margin: 10px;
-  flex: 0 0 calc(33.33% - 20px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
 }
 
-.our-service img {
+.gallery {
+  height: 100%;
   width: 100%;
-  height: auto;
-  display: block;
-  filter: brightness(
-    70%
-  ); /* Adjust brightness percentage to darken the image */
 }
 
-/* Position the text container */
+.gallery .grid-wrapper {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 10px;
+  grid-auto-flow: dense;
+}
+
+.gallery .grid-wrapper .our-service {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+} 
+
+.gallery .grid-wrapper .our-service img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: 0.3s ease-in-out;
+  filter: brightness(70%);
+  margin-bottom: 0;
+}
+
+.gallery .grid-wrapper .our-service:first-child {
+  grid-column-start: span 1;
+  grid-row-start: span 1;
+}
+
+.gallery .grid-wrapper .our-service:nth-child(2n + 3) {
+  grid-row-start: span 2;
+  grid-column-start: span 1;
+}
+
+.gallery .grid-wrapper .our-service:nth-child(4n + 5) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+
+.gallery .grid-wrapper .our-service:nth-child(6n + 7) {
+  grid-row-start: span 1;
+  grid-column-start: span 2;
+}
 .our-service .text {
   position: absolute;
-  top: 60%;
+  top: 50%;
   left: 50%;
   width: 80%;
   transform: translate(-50%, -50%);
   padding: 10px;
-
   color: #fff;
+  text-align: center;
 }
 
 .our-service h3,
@@ -557,23 +584,23 @@ img {
 }
 
 .our-service a {
-  display: block;
+  display: inline-block;
   padding: 5px 10px;
   background-color: transparent;
   color: #fff;
   text-decoration: none;
   border-radius: 1px;
   margin-top: 10px;
-  border: 1px solid #fff; /* Add border */
+  border: 1px solid #fff;
 }
 
 .our-service a:hover {
   background-color: var(--button-hover);
   color: var(--primary);
   border: 1px solid #0e2433;
-}
+} 
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .our-service {
     flex: 0 0 calc(50% - 20px); 
   }
@@ -583,6 +610,230 @@ img {
   .our-service {
     flex: 0 0 calc(100% - 20px); 
   }
-}
+} */
 
 /** ===== OUR SERVICES END ===== **/
+
+/** ===== FOOTER   ===== **/
+.footer {
+  background: linear-gradient(rgba(0, 46, 87, 0.432), rgba(0, 47, 87, 0.432)),
+    url("../images/footer-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  padding: 5em 0 3em 0;
+}
+
+.footer-container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 576px) {
+  .footer-container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .footer-container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .footer-container {
+    max-width: 1240px;
+  }
+}
+
+.footer-section {
+  padding: 2em 0;
+  position: relative;
+}
+.footer-brand img {
+  position: relative;
+  right: 12px;
+  top: -10px;
+}
+
+.footer .logo {
+  font-size: 34px !important;
+  text-transform: uppercase;
+  font-weight: 800 !important;
+  line-height: 1;
+}
+
+.footer .logo a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.footer .footer-widget h2 {
+  font-weight: normal;
+  color: var(--primary);
+  font-size: 24px;
+}
+.footer .footer-widget li .text {
+  color: #fff;
+
+  margin-bottom: 0px;
+}
+.footer .footer-widget .footer-social li a {
+  font-size: 1.5rem;
+}
+
+.footer .footer-widget .list-unstyled ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer .footer-widget .list-unstyled ul li,
+.footer .footer-widget .list-unstyled ul li > a {
+  display: table;
+  line-height: 1.5;
+  margin-bottom: 5px;
+  color: var(--light);
+}
+
+.footer .footer-widget .list-unstyled ul li .fas,
+.footer .footer-widget .list-unstyled ul li .text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.footer .footer-widget .list-unstyled ul li .fas {
+  width: 40px;
+  font-size: 18px;
+  padding-top: 2px;
+}
+
+.footer .footer-widget .list-unstyled ul li:hover i,
+.footer .footer-widget .list-unstyled ul li:hover span {
+  color: var(--primary);
+}
+
+.footer .footer-widget .list-social li a {
+  color: var(--light);
+}
+
+.footer .footer-widget .list-social li a:hover {
+  color: var(--primary);
+}
+
+.footer-widget .center {
+  margin-bottom: 1.5rem;
+  margin-left: 1rem;
+}
+
+@media (max-width: 991.98px) {
+  .footer-widget .center {
+    margin-left: 0;
+  }
+  .ms-md-5 {
+    margin-left: 0 !important;
+  }
+}
+.footer .footer-widget .information ul {
+  padding: 0;
+  list-style: none;
+}
+
+.footer .footer-widget .information ul li,
+.footer .footer-widget .information ul li > a {
+  display: table;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.footer .footer-widget .information ul li .fas,
+.footer .footer-widget .information ul li .text {
+  display: table-cell;
+  vertical-align: top;
+}
+
+.footer .footer-widget .information ul li .fas {
+  width: 40px;
+  font-size: 18px;
+  padding-top: 2px;
+  color: var(--light);
+}
+
+.footer .footer-widget .btn-primary {
+  background: #fff !important;
+  border: 2px solid #fff !important;
+  color: #222831;
+  text-decoration: none;
+}
+
+.footer .footer-widget .btn-primary:hover {
+  background: #fff;
+  border: 2px solid #fff !important;
+}
+
+.footer p,
+.footer a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: #fff;
+}
+
+.footer .heading-2 {
+  font-size: 17px;
+  font-weight: 400;
+  color: #fff;
+  position: relative;
+}
+.footer .heading-2 .text span {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer .opening-hours h4 {
+  color: var(--light);
+  font-size: 16px;
+}
+
+.footer .opening-hours p span {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.footer-social li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-social li:last-child {
+  margin-right: 0;
+}
+
+.footer-social li a {
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+.footer-social li a:hover {
+  background: #fff;
+}
+
+.footer-social li a span {
+  font-size: 26px;
+}
+
+/** ===== FOOTER END ===== **/
