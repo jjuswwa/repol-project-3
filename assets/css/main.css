@@ -542,8 +542,7 @@ img {
   justify-content: center;
   align-items: center;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1200px) {
   .gallery {
     display: block;
   }
@@ -554,24 +553,42 @@ img {
     margin-bottom: 10px;
   }
 
-  .our-service .text {
-    width: 90% !important;
-    font-size: 12px;
-  }
-  .our-service h3 {
-    font-size: 18px !important;
-  }
-
-  .our-service span {
-    font-size: 10px !important;
-  }
-
   .img-row-2 {
-    height: 35vh !important;
+    height: 30vh !important;
   }
 
   img.col-2 {
-    display: none !important;
+    /* display: none !important; */
+  }
+
+  .our-service {
+    height: 30vh !important;
+  }
+
+  .our-service .text {
+    width: 80% !important;
+  }
+
+  .our-service h3 {
+    font-size: 36px !important;
+  }
+
+  .our-service span {
+    font-weight: 400 !important;
+    font-size: 22px !important;
+    line-height: 24px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .our-service h3 {
+    font-size: 22px !important;
+  }
+
+  .our-service span {
+    font-weight: 400 !important;
+    font-size: 12px !important;
+    line-height: 14px !important;
   }
 }
 /** EXAMPLE 2 END **/
@@ -618,7 +635,7 @@ img {
   font-family: var(--font-description);
 }
 
-.our-service a {
+/* .our-service a {
   display: inline-block;
   padding: 5px 10px;
   background-color: transparent;
@@ -633,7 +650,7 @@ img {
   background-color: var(--button-hover);
   color: var(--primary);
   border: 1px solid #0e2433;
-}
+} */
 
 /** ===== OUR SERVICES END ===== **/
 
@@ -747,7 +764,7 @@ form button:hover {
   border-color: #0e2433;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1200px) {
   form {
     width: 100%;
   }
@@ -790,7 +807,7 @@ form button:hover {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   .footer-container {
     max-width: 540px;
   }
@@ -812,7 +829,7 @@ form button:hover {
   .footer-container {
     max-width: 1240px;
   }
-}
+} */
 
 .footer-section {
   padding: 2em 0;
@@ -847,7 +864,7 @@ form button:hover {
   margin-bottom: 0px;
 }
 .footer .footer-widget .footer-social {
-  width: 80%;
+  width: 100%;
 }
 .footer .footer-widget .footer-social li a {
   font-size: 1.5rem;
@@ -896,8 +913,12 @@ form button:hover {
   margin-left: 1rem;
 }
 
-@media (max-width: 991.98px) {
-  .footer-widget .center {
+@media (max-width: 1200px) {
+  .footer-brand img {
+    width: 140vh !important;
+  }
+
+  .footer-widget {
     margin-left: 0;
   }
   .ms-md-5 {
@@ -919,6 +940,12 @@ form button:hover {
 
   .footer .footer-social {
     margin-left: -18px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer-brand img {
+    width: 75% !important;
   }
 }
 .footer .footer-widget .information {
