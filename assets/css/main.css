@@ -78,6 +78,12 @@ img {
   display: inline-block;
 }
 
+.img {
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
 .section-padding {
   padding-top: 140px;
   padding-bottom: 140px;
@@ -126,7 +132,7 @@ img {
   font-weight: 300;
   color: var(--white);
   margin: 0.5rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .navbar-scrolled .navbar-nav .nav-link {
@@ -320,7 +326,7 @@ img {
 }
 .heading-section .subheading {
   text-transform: uppercase;
-  font-size: 18px;
+  font-size: 14px;
   display: block;
   font-family: var(--font-description);
   margin-bottom: 5px;
@@ -411,28 +417,19 @@ img {
   position: relative;
   height: 100%;
   min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container-img img {
   position: absolute;
-  width: 55%;
-  height: 90%;
+  width: 90%;
+  height: 100%;
   object-fit: fill;
-}
-
-.container-img img:last-child {
-  margin: 20% 0 0 40%;
-}
-
-.container-img::before {
-  position: absolute;
-  content: "";
-  width: 50%;
-  height: 90%;
-  top: 10%;
-  left: 20%;
-  border: 5px solid var(--primary);
-  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .lead {
@@ -507,59 +504,97 @@ img {
 /** ===== MISSION & VISION END ===== **/
 
 /** ===== OUR SERVICES ===== **/
+/** EXAMPLE 1 **/
+/* .gallery {
+  flex-basis: 100%;
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(2, 1fr) 1fr;
+  grid-auto-rows: 250px;
+}
+
 .our-service {
   position: relative;
-}
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+} */
+/** EXAMPLE 1 END **/
+
+/** EXAMPLE 2 **/
 .gallery {
-  height: 100%;
-  width: 100%;
-}
-
-.gallery .grid-wrapper {
-  height: 100%;
-  width: 100%;
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 10px;
-  grid-auto-flow: dense;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 250px;
 }
 
-.gallery .grid-wrapper .our-service {
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-
-} 
-
-.gallery .grid-wrapper .our-service img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-  transition: 0.3s ease-in-out;
-  filter: brightness(70%);
-  margin-bottom: 0;
+.our-service {
+  position: relative;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.gallery .grid-wrapper .our-service:first-child {
-  grid-column-start: span 1;
-  grid-row-start: span 1;
+@media screen and (max-width: 600px) {
+  .gallery {
+    display: block;
+  }
+
+  .our-service {
+    width: 100%;
+    height: 250px;
+    margin-bottom: 10px;
+  }
+
+  .our-service .text {
+    width: 90% !important;
+    font-size: 12px;
+  }
+  .our-service h3 {
+    font-size: 18px !important;
+  }
+
+  .our-service span {
+    font-size: 10px !important;
+  }
+
+  .img-row-2 {
+    height: 35vh !important;
+  }
+
+  img.col-2 {
+    display: none !important;
+  }
+}
+/** EXAMPLE 2 END **/
+
+.our-service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.486);
 }
 
-.gallery .grid-wrapper .our-service:nth-child(2n + 3) {
-  grid-row-start: span 2;
-  grid-column-start: span 1;
+.img-row-2 {
+  grid-row: span 2;
+  height: auto;
 }
 
-.gallery .grid-wrapper .our-service:nth-child(4n + 5) {
-  grid-column-start: span 2;
-  grid-row-start: span 2;
+.img-col-2 {
+  grid-column: span 2;
 }
 
-.gallery .grid-wrapper .our-service:nth-child(6n + 7) {
-  grid-row-start: span 1;
-  grid-column-start: span 2;
-}
 .our-service .text {
   position: absolute;
   top: 50%;
@@ -571,16 +606,16 @@ img {
   text-align: center;
 }
 
-.our-service h3,
-.our-service span,
-.our-service a {
+.our-service h3 {
   margin: 0;
-  font-size: 18px;
+  font-size: 22px;
 }
 
 .our-service span {
+  display: block;
   margin-top: 5px;
-  font-size: 14px;
+  font-size: 12px;
+  font-family: var(--font-description);
 }
 
 .our-service a {
@@ -598,23 +633,147 @@ img {
   background-color: var(--button-hover);
   color: var(--primary);
   border: 1px solid #0e2433;
-} 
-
-/* @media (max-width: 768px) {
-  .our-service {
-    flex: 0 0 calc(50% - 20px); 
-  }
 }
-
-@media (max-width: 576px) {
-  .our-service {
-    flex: 0 0 calc(100% - 20px); 
-  }
-} */
 
 /** ===== OUR SERVICES END ===== **/
 
+/** ===== CONTACT   ===== **/
+.description p {
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+}
+
+form {
+  width: 450px;
+  text-align: start;
+}
+
+form .form-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+form .form-container .required {
+  position: relative;
+  top: 10px;
+  color: var(--light);
+  font-weight: 200;
+  font-family: var(--font-description);
+}
+
+.field .item {
+  width: 100%;
+  padding: 12px;
+  outline: none;
+  border-radius: 4px;
+  font-size: 16px;
+  color: var(--dark);
+  font-family: var(--font-description);
+  font-weight: 400;
+  margin: 8px 0;
+}
+
+.field select {
+  height: 27px !important;
+  padding: 0 !important;
+  color: var(--dark) !important;
+}
+.checkbox-field .item {
+  opacity: 0;
+  position: relative;
+}
+
+.checkbox-field .item + label {
+  position: relative;
+  padding-left: 20px;
+  cursor: pointer;
+  margin-top: -50px;
+  font-weight: 200;
+  font-family: var(--font-description);
+  line-height: 22px;
+  user-select: none;
+}
+
+.checkbox-field .item + label:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 15px;
+  height: 15px;
+  background-color: #fff;
+}
+
+.checkbox-field .item:checked + label:before {
+  background-color: #007bff;
+}
+
+.checkbox-field .item:checked + label:after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.checkbox-field .item:disabled + label {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+form button {
+  padding: 8px 24px;
+  background: var(--button);
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  color: var(--light);
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-family: var(--font-description);
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--button-hover);
+  color: var(--primary);
+  border-color: #0e2433;
+}
+
+@media only screen and (max-width: 768px) {
+  form {
+    width: 100%;
+  }
+
+  form .form-container {
+    flex-direction: column;
+  }
+
+  .field .item,
+  .checkbox-field .item + label {
+    width: calc(100% - 24px) !important;
+    margin-left: 10px !important;
+    margin: 8px 0;
+  }
+
+  form .required {
+    margin-left: 0 !important;
+  }
+  form button {
+    width: 100%;
+  }
+}
+/** ===== CONTACT END   ===== **/
+
 /** ===== FOOTER   ===== **/
+/** ===== CONSULTATION FORM ===== **/
 .footer {
   background: linear-gradient(rgba(0, 46, 87, 0.432), rgba(0, 47, 87, 0.432)),
     url("../images/footer-bg.jpg");
@@ -661,8 +820,8 @@ img {
 }
 .footer-brand img {
   position: relative;
-  right: 12px;
-  top: -10px;
+  right: -20px;
+  top: -25px;
 }
 
 .footer .logo {
@@ -686,6 +845,9 @@ img {
   color: #fff;
 
   margin-bottom: 0px;
+}
+.footer .footer-widget .footer-social {
+  width: 80%;
 }
 .footer .footer-widget .footer-social li a {
   font-size: 1.5rem;
@@ -741,16 +903,39 @@ img {
   .ms-md-5 {
     margin-left: 0 !important;
   }
+
+  .footer .footer-logo {
+    margin-left: -18px !important;
+  }
+
+  .footer .contact-info {
+    margin-top: 1.5rem !important;
+    margin-left: 0 !important;
+  }
+
+  .footer .contact-details {
+    margin-left: 0 !important;
+  }
+
+  .footer .footer-social {
+    margin-left: -18px !important;
+  }
 }
+.footer .footer-widget .information {
+  width: 80%;
+}
+
 .footer .footer-widget .information ul {
   padding: 0;
   list-style: none;
+  width: 100%;
 }
 
 .footer .footer-widget .information ul li,
 .footer .footer-widget .information ul li > a {
   display: table;
   line-height: 1.5;
+
   margin-bottom: 15px;
 }
 
@@ -836,4 +1021,5 @@ img {
   font-size: 26px;
 }
 
+/** ===== CONSULTATION FORM END ===== **/
 /** ===== FOOTER END ===== **/

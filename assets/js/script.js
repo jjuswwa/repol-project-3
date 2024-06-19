@@ -73,6 +73,35 @@ if (fragment) {
   }
 }
 
+// Send in Gmail
+function sendEmail() {
+  let fullName = document.getElementById("fullName").value;
+  let email = document.getElementById("email").value;
+  let phoneNumber = document.getElementById("phoneNumber").value;
+  let legalServices = document.getElementById("legalServices").value;
+  let message = document.getElementById("message").value;
+
+  let messageBody =
+    "Name: " +
+    fullName +
+    "<br> Email: " +
+    email +
+    "<br> Phone Number: " +
+    phoneNumber +
+    "<br> Legal Service: " +
+    legalServices +
+    "<br> message: " +
+    message;
+  Email.send({
+    Host: "smtp.elasticemail.com",
+    Username: "mrdemotester0101@gmail.com",
+    Password: "DD539767D006D43B1DA7D624236F2B3C8379",
+    To: "mrdemotester0101@gmail.com",
+    From: "mrdemotester0101@gmail.com",
+    Subject: "This is the subject",
+    Body: messageBody,
+  }).then((message) => alert("Message Sent Succesfully"));
+}
 // Array of words to be typed
 // const wordsToType = ["Solution.", "Freedom.", "Fight.", "Case."];
 // let currentWordIndex = 0;
